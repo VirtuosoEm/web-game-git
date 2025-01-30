@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: d0fd289007df4f04583a2eecec651015
+  productGUID: a9843aef7a1c81f4ab4ae34d9d845532
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -569,7 +569,7 @@ PlayerSettings:
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    WebGL: PLUGIN_YG_2;YandexGamesPlatform_yg;TMP_YG2
+    Standalone: PLUGIN_YG_2;YandexGamesPlatform_yg;TMP_YG2
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
