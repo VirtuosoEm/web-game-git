@@ -5,6 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+    /*public static LevelManager instance = null;
+
+    private void Start()
+    {
+        if (instance == null)
+        { 
+            instance = this; 
+        }
+        else if (instance == this)
+        {
+            Destroy(gameObject);
+        }
+
+        
+        DontDestroyOnLoad(gameObject);
+    }
+    */
     public void GameButton()
     {
         SceneManager.LoadScene(1);
@@ -13,4 +30,5 @@ public class LevelManager : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
 }
