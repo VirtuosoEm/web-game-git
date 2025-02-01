@@ -9,11 +9,13 @@ public class PlayerControll : MonoBehaviour
     private bool isJumping;
     void Start()
     {
+        Debug.Log("Перс создался и вызвал CameraFoloww");    
+
         rb = GetComponent<Rigidbody>();
         isJumping = false;
     }
 
-    private void Update()
+    /*private void Update()
     {
 
         if (Input.GetKeyDown(KeyCode.Space) && isJumping == false)
@@ -23,7 +25,7 @@ public class PlayerControll : MonoBehaviour
         }
 
        
-    }
+    }*/ //Прыжок
 
     private void FixedUpdate()
     {
