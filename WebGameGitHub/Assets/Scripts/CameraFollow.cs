@@ -34,11 +34,11 @@ public class CameraFollow : MonoBehaviour
 
     public void PlayerSearch()
     {
-        Debug.Log("Попал в функцию поиска игрока");
+        
         player = GameObject.FindWithTag("Player");
         offset = transform.position - player.transform.position;
         playerFollow = true;
-        Debug.Log("Попал в функцию поиска игрока");
+        
         
     }
 

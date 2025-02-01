@@ -361,6 +361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53bd14a4b8451f0439cb2e70291a89da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerId: 0
   player:
   - {fileID: 1355186155173551041, guid: 4dbaa91ae4b779141ae9f45a3a0ce8ee, type: 3}
   - {fileID: 3190315746886396702, guid: 79b95f919d3de77499da4291ebc41074, type: 3}
@@ -1975,6 +1976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7109987bd6fe15445b0aa9844f869692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  odinRazBool: 0
 --- !u!1 &984412155
 GameObject:
   m_ObjectHideFlags: 0

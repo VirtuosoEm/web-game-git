@@ -6,13 +6,13 @@ public class PlayerControll : MonoBehaviour
 {
     public float speed = 6f;
     public Rigidbody rb;
-    private bool isJumping;
+    //private bool isJumping;
     void Start()
     {
         Debug.Log("Перс создался и вызвал CameraFoloww");    
 
         rb = GetComponent<Rigidbody>();
-        isJumping = false;
+        //isJumping = false;
     }
 
     /*private void Update()
@@ -37,8 +37,8 @@ public class PlayerControll : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter(Collision collision)
+    /*private void OnCollisionEnter(Collision collision)
     {
         isJumping = false;
-    }
+    }*/
 }

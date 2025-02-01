@@ -6,14 +6,14 @@ using UnityEngine.UIElements;
 public class SpawnerManager : MonoBehaviour
 {
 
-
+    public int playerId;
     public GameObject[] player;
     public Transform spawnPoint;
 
 
     void Start()
     {
-        Instantiate(player[0],spawnPoint.position, spawnPoint.rotation);
+        Instantiate(player[playerId],spawnPoint.position, spawnPoint.rotation);
 
     }
 
