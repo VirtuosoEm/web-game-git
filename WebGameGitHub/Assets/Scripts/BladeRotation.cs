@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BladeRotation : MonoBehaviour
 {
@@ -19,5 +20,13 @@ public class BladeRotation : MonoBehaviour
             transform.Rotate(Vector3.back, rotationSpeed * Time.deltaTime);
         }
 
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Ground")
+        {
+            SceneManager.LoadScene(1);
+        }
     }
 }

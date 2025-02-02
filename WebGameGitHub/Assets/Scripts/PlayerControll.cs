@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerControll : MonoBehaviour
 {
@@ -8,9 +9,7 @@ public class PlayerControll : MonoBehaviour
     private Rigidbody rb;
     //private bool isJumping;
     void Start()
-    {
-        Debug.Log("Перс создался и вызвал CameraFoloww");    
-
+    {   
         rb = GetComponent<Rigidbody>();
         //isJumping = false;
     }
@@ -36,6 +35,13 @@ public class PlayerControll : MonoBehaviour
         rb.AddForce(movement * speed);
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Ground")
+        {
+            SceneManager.LoadScene(1);
+        }
+    }
 
     /*private void OnCollisionEnter(Collision collision)
     {
