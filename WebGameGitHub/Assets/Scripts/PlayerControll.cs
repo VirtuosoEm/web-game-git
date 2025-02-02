@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerControll : MonoBehaviour
 {
     public float speed = 6f;
-    public Rigidbody rb;
+    private Rigidbody rb;
     //private bool isJumping;
     void Start()
     {
