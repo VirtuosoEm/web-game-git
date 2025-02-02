@@ -8,6 +8,14 @@ public class PlayerControll : MonoBehaviour
     public float speed = 6f;
     private Rigidbody rb;
     //private bool isJumping;
+
+
+    //* смещение ветром
+    private Vector3 windDirection = Vector3.right;
+    private float windSpeed = 5f;
+    private bool wind;
+    //*
+
     void Start()
     {   
         rb = GetComponent<Rigidbody>();
@@ -28,11 +36,24 @@ public class PlayerControll : MonoBehaviour
 
     private void FixedUpdate()
     {
+        /*if (Input.GetKeyDown(KeyCode.Space)) // смена направления ветра
+        {
+            windDirection = -windDirection;
+        }*/
+        if (wind)
+        {
+            transform.position += windDirection * windSpeed * Time.deltaTime;
+        }
+       
+
+        
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
         Vector3 movement = new Vector3(moveHorizontal, 0, moveVertical);
         rb.AddForce(movement * speed);
+
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -40,6 +61,17 @@ public class PlayerControll : MonoBehaviour
         if (other.gameObject.tag == "Ground")
         {
             SceneManager.LoadScene(1);
+        }
+        if (other.gameObject.tag == "Wind")
+        {
+            wind = true;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Wind")
+        {
+            wind = false;
         }
     }
 

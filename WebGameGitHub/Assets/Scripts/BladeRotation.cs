@@ -22,11 +22,5 @@ public class BladeRotation : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Ground")
-        {
-            SceneManager.LoadScene(1);
-        }
-    }
+
 }
