@@ -1,3 +1,3 @@
-Build path: D:/GameGit/Build
-Build number: 2
+Build path: D:/GameGit/0001
+Build number: 3
 PluginYG version: 2.0031
