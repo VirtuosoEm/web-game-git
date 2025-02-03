@@ -12,8 +12,10 @@ public class PlayerControll : MonoBehaviour
 
     //* смещение ветром
     private Vector3 windDirection = Vector3.right;
+    private Vector3 windLeftDirection = Vector3.left;
     private float windSpeed = 5f;
-    private bool wind;
+    private bool windRight;
+    private bool windLeft;
     //*
 
     void Start()
@@ -40,9 +42,13 @@ public class PlayerControll : MonoBehaviour
         {
             windDirection = -windDirection;
         }*/
-        if (wind)
+        if (windRight)
         {
             transform.position += windDirection * windSpeed * Time.deltaTime;
+        }
+        if (windLeft)
+        {
+            transform.position += windLeftDirection * windSpeed * Time.deltaTime;
         }
        
 
@@ -62,16 +68,24 @@ public class PlayerControll : MonoBehaviour
         {
             SceneManager.LoadScene(1);
         }
-        if (other.gameObject.tag == "Wind")
+        if (other.gameObject.tag == "WindRight")
         {
-            wind = true;
+            windRight = true;
+        }
+        if (other.gameObject.tag == "WindLeft")
+        {
+            windLeft = true;
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Wind")
+        if (other.gameObject.tag == "WindRight")
         {
-            wind = false;
+            windRight = false;
+        }
+        if (other.gameObject.tag == "WindLeft")
+        {
+            windLeft = false;
         }
     }
 
