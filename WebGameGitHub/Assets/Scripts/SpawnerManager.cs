@@ -14,6 +14,7 @@ public class SpawnerManager : MonoBehaviour
     void Start()
     {
         Instantiate(player[playerId],spawnPoint.position, spawnPoint.rotation);
+        CameraFollow.playerInGame = true;
 
     }
 
