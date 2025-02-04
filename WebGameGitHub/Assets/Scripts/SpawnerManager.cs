@@ -5,15 +5,15 @@ using UnityEngine.UIElements;
 
 public class SpawnerManager : MonoBehaviour
 {
-
-    public int playerId;
     public GameObject[] player;
     public Transform spawnPoint;
 
 
     void Start()
     {
-        Instantiate(player[playerId],spawnPoint.position, spawnPoint.rotation);
+        
+        Instantiate(player[PlayerPrefs.GetInt("Ball")],spawnPoint.position, spawnPoint.rotation);
+        CameraFollow.playerInGame = true;
 
     }
 
