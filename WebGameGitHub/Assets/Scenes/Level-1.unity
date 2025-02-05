@@ -462,6 +462,7 @@ MonoBehaviour:
   player:
   - {fileID: 1355186155173551041, guid: 4dbaa91ae4b779141ae9f45a3a0ce8ee, type: 3}
   - {fileID: 3190315746886396702, guid: 79b95f919d3de77499da4291ebc41074, type: 3}
+  - {fileID: 1616619957074672055, guid: 3c9568b8f65eb334d92f45855d18df6e, type: 3}
   spawnPoint: {fileID: 2052860170}
 --- !u!4 &241577693
 Transform:
