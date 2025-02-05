@@ -13,7 +13,7 @@ public class PlayerControll : MonoBehaviour
     //* смещение ветром
     private Vector3 windDirection = Vector3.right;
     private Vector3 windLeftDirection = Vector3.left;
-    private float windSpeed = 5f;
+    public float windSpeed = 5f;
     private bool windRight;
     private bool windLeft;
     //*
