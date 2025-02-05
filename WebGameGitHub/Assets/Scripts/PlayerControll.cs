@@ -42,6 +42,7 @@ public class PlayerControll : MonoBehaviour
         {
             windDirection = -windDirection;
         }*/
+
         if (windRight)
         {
             transform.position += windDirection * windSpeed * Time.deltaTime;
@@ -50,7 +51,7 @@ public class PlayerControll : MonoBehaviour
         {
             transform.position += windLeftDirection * windSpeed * Time.deltaTime;
         }
-       
+        
 
         
         float moveHorizontal = Input.GetAxis("Horizontal");
@@ -58,8 +59,13 @@ public class PlayerControll : MonoBehaviour
 
         Vector3 movement = new Vector3(moveHorizontal, 0, moveVertical);
         rb.AddForce(movement * speed);
+        /*if (Input.GetKey(KeyCode.Space))
+        {
+            Debug.Log("ПРобел");
+            rb.AddForce(movement * 1000);
+        }*/
 
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
