@@ -460,9 +460,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player:
-  - {fileID: 1355186155173551041, guid: 4dbaa91ae4b779141ae9f45a3a0ce8ee, type: 3}
-  - {fileID: 3190315746886396702, guid: 79b95f919d3de77499da4291ebc41074, type: 3}
-  - {fileID: 1616619957074672055, guid: 3c9568b8f65eb334d92f45855d18df6e, type: 3}
+  - {fileID: 1661415685624470236, guid: 4dbaa91ae4b779141ae9f45a3a0ce8ee, type: 3}
+  - {fileID: 3732805208863440027, guid: 79b95f919d3de77499da4291ebc41074, type: 3}
+  - {fileID: 4181589590670197259, guid: 0962476ce8e462946963cb24374aa471, type: 3}
   spawnPoint: {fileID: 2052860170}
 --- !u!4 &241577693
 Transform:
@@ -3210,7 +3210,7 @@ Transform:
   m_GameObject: {fileID: 2052860169}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.232244, y: 40.008533, z: -72.8739}
+  m_LocalPosition: {x: -3.232244, y: 40.38, z: -72.8739}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
