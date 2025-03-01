@@ -22,13 +22,15 @@ public class LevelManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
     */
-    public void GameButton()
-    {
-        SceneManager.LoadScene(1);
-    }
+
     public void MenuButton()
     {
         SceneManager.LoadScene(0);
     }
+    public void GameButton()
+    {
+        SceneManager.LoadScene(1);
+    }
+    
 
 }
