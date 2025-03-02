@@ -30,6 +30,7 @@ public class LevelManager : MonoBehaviour
     public void GameButton()
     {
         SceneManager.LoadScene(1);
+        GameManager.LevelIndex = 1;
     }
     
 

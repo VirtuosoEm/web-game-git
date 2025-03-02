@@ -16,7 +16,6 @@ public class PlayerControll : MonoBehaviour
     public float windSpeed = 5f;
     private bool windRight;
     private bool windLeft;
-    //*
 
     void Start()
     {   
@@ -51,9 +50,7 @@ public class PlayerControll : MonoBehaviour
         {
             transform.position += windLeftDirection * windSpeed * Time.deltaTime;
         }
-        
-
-        
+       
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
@@ -65,14 +62,15 @@ public class PlayerControll : MonoBehaviour
             rb.AddForce(movement * 1000);
         }*/
 
-
+        
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Ground")
         {
-            SceneManager.LoadScene(1);
+            
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //загружая ту сцену на которой был
         }
         if (other.gameObject.tag == "WindRight")
         {
@@ -82,6 +80,14 @@ public class PlayerControll : MonoBehaviour
         {
             windLeft = true;
         }
+        if (other.gameObject.tag == "Money")
+        {
+            Destroy(other.gameObject);
+            GameManager.Money++;
+            Debug.Log("Монет" + GameManager.Money.ToString());
+            
+        }
+
     }
     private void OnTriggerExit(Collider other)
     {
