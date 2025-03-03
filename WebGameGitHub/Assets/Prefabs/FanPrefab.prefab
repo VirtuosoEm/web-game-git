@@ -46,8 +46,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c98b02a5aa06c6542b091ae2dc3b0763, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 1000
+  targetScale: 1.5
+  scaleDuration: 1
+  loop: 1
+  rotationSpeed: 800
   backRotate: 0
+  isMoney: 0
+  isMolot: 0
+  isFan: 1
 --- !u!1 &2722163173269429380
 GameObject:
   m_ObjectHideFlags: 0

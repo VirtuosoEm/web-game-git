@@ -6,7 +6,8 @@ using UnityEngine;
 
 public class SelectItems : MonoBehaviour
 {
-    [SerializeField] private int _money;
+    //[SerializeField] private int _money;
+    public static int _money;
     [SerializeField] private TextMeshProUGUI _moneyText;
     private const string MONEY_TAG = "Money";
 

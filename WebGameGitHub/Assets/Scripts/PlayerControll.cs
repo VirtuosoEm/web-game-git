@@ -83,9 +83,8 @@ public class PlayerControll : MonoBehaviour
         if (other.gameObject.tag == "Money")
         {
             Destroy(other.gameObject);
-            GameManager.Money++;
-            Debug.Log("Монет" + GameManager.Money.ToString());
-            
+            SelectItems._money++;
+            Debug.Log("Монет" + SelectItems._money);
         }
 
     }

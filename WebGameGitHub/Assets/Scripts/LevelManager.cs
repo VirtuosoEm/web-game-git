@@ -25,7 +25,10 @@ public class LevelManager : MonoBehaviour
 
     public void MenuButton()
     {
+        PlayerPrefs.SetInt("Money", SelectItems._money);
+        Debug.Log("Menu");
         SceneManager.LoadScene(0);
+        
     }
     public void GameButton()
     {
