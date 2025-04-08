@@ -7,6 +7,7 @@ using YG;
 
 public class SelectItems : MonoBehaviour
 {
+
     //[SerializeField] private int _money;
     public static int _money;
     [SerializeField] private TextMeshProUGUI _moneyText;
@@ -26,7 +27,7 @@ public class SelectItems : MonoBehaviour
 
     private void Start()
     {
-        _money = PlayerPrefs.HasKey(MONEY_TAG) ? PlayerPrefs.GetInt(MONEY_TAG) : 1000;
+        _money = PlayerPrefs.HasKey(MONEY_TAG) ? PlayerPrefs.GetInt(MONEY_TAG) : 10;
         //_money = YG2.saves.coins;
         _moneyText.text = $"Денег: {_money}$";
 
@@ -59,6 +60,10 @@ public class SelectItems : MonoBehaviour
 
     }
 
+    public void FixedUpdate()
+    {
+        _moneyText.text = $"Денег: {_money}$";
+    }
     public void SelectLeft()
     {
         _itemParent.GetChild(_currentIndex).gameObject.SetActive(false);
@@ -133,6 +138,7 @@ public class SelectItems : MonoBehaviour
         _selectText.text = "Выбрано";
     }
 
+    
     /*public void DeleteSave()
     {
         //PlayerPrefs.DeleteAll();
