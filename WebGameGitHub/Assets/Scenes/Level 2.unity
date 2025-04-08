@@ -302,21 +302,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2448792912353818479, guid: 0ed336bb602cc97408ee179592199c3c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1293931030}
-    - target: {fileID: 2448792912353818479, guid: 0ed336bb602cc97408ee179592199c3c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: MenuButton
-      objectReference: {fileID: 0}
     - target: {fileID: 7266097531831490122, guid: 0ed336bb602cc97408ee179592199c3c, type: 3}
       propertyPath: m_Name
       value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 7266097531831490122, guid: 0ed336bb602cc97408ee179592199c3c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7310897846124630792, guid: 0ed336bb602cc97408ee179592199c3c, type: 3}
       propertyPath: m_Pivot.x
@@ -402,10 +390,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 2040765441}
-    - target: {fileID: 7315147228214648729, guid: 0ed336bb602cc97408ee179592199c3c, type: 3}
-      propertyPath: m_RenderMode
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -528,7 +512,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c98b02a5aa06c6542b091ae2dc3b0763, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetScale: 1.5
+  scaleDuration: 1
+  loop: 1
   rotationSpeed: 1000
+  backRotate: 0
   isMoney: 1
   isMolot: 0
   isFan: 0
@@ -7082,17 +7070,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8566668647888729240, guid: bbeddb8398508c24cb24b22b48ff1052, type: 3}
---- !u!114 &1293931030 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6420676218833559576, guid: 0ed336bb602cc97408ee179592199c3c, type: 3}
-  m_PrefabInstance: {fileID: 169706883}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27f10770b54161241885ce2fe3a4d6df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1343520284 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6886202137352677370, guid: 1250f71017416b843891b286aeb8fdc1, type: 3}
@@ -8573,7 +8550,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c98b02a5aa06c6542b091ae2dc3b0763, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetScale: 1.5
+  scaleDuration: 1
+  loop: 1
   rotationSpeed: 1000
+  backRotate: 0
   isMoney: 0
   isMolot: 0
   isFan: 0

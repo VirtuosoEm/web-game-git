@@ -26,8 +26,8 @@ public class SelectItems : MonoBehaviour
 
     private void Start()
     {
-        //_money = PlayerPrefs.HasKey(MONEY_TAG) ? PlayerPrefs.GetInt(MONEY_TAG) : 1000;
-        _money = YG2.saves.coins;
+        _money = PlayerPrefs.HasKey(MONEY_TAG) ? PlayerPrefs.GetInt(MONEY_TAG) : 1000;
+        //_money = YG2.saves.coins;
         _moneyText.text = $"Δενεγ: {_money}$";
 
 
