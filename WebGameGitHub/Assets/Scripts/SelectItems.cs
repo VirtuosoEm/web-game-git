@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using YG;
 
 
 public class SelectItems : MonoBehaviour
@@ -25,7 +26,8 @@ public class SelectItems : MonoBehaviour
 
     private void Start()
     {
-        _money = PlayerPrefs.HasKey(MONEY_TAG) ? PlayerPrefs.GetInt(MONEY_TAG) : 1000;
+        //_money = PlayerPrefs.HasKey(MONEY_TAG) ? PlayerPrefs.GetInt(MONEY_TAG) : 1000;
+        _money = YG2.saves.coins;
         _moneyText.text = $"Денег: {_money}$";
 
 
@@ -39,6 +41,17 @@ public class SelectItems : MonoBehaviour
             _itemParent.GetChild(i).gameObject.SetActive(false);
 
         _savedItemIndex = PlayerPrefs.HasKey(_key) ? PlayerPrefs.GetInt(_key) : 0;
+        /*if (YG2.saves.ball != 0)
+        {
+            _savedItemIndex = YG2.saves.indexBall;
+        }
+        else
+        {
+            _savedItemIndex = 0;
+        }*/
+
+        //_savedItemIndex = YG2.saves.indexBall;
+        //Debug.Log("индекс мяча " + YG2.saves.indexBall);
         _currentIndex = _savedItemIndex;
 
         _itemParent.GetChild(_savedItemIndex).gameObject.SetActive(true);
@@ -103,6 +116,7 @@ public class SelectItems : MonoBehaviour
             _items[_currentIndex].SavePurchase();
             SaveItem();
             PlayerPrefs.SetInt(MONEY_TAG, _money);
+            //YG2.saves.coins = _money;
         }
     }
 
@@ -110,15 +124,20 @@ public class SelectItems : MonoBehaviour
     {
         PlayerPrefs.SetInt(_key, _currentIndex);
         PlayerPrefs.SetInt("Ball", _currentIndex);
+        //Debug.Log("Я в сохранении и сохранять должен" + _key + " -- это _key;");
+
+        //YG2.saves.indexBall = _currentIndex;
+        //YG2.saves.ball = _currentIndex;
 
         _savedItemIndex = _currentIndex;
         _selectText.text = "Выбрано";
     }
 
-    public void DeleteSave()
+    /*public void DeleteSave()
     {
-        PlayerPrefs.DeleteAll();
-    }
+        //PlayerPrefs.DeleteAll();
+        SaveProgress.instance.DefoltSave();
+    }*/
 
 
 }
@@ -130,12 +149,38 @@ public class Item
     public bool IsPurchased = false;
     public int Cost;
 
-    public void InitializeItem() =>
+    public void InitializeItem()
+    {
         IsPurchased = PlayerPrefs.HasKey(_key) ? PlayerPrefs.GetInt(_key) == 1 : false;
+        /*if (YG2.saves.nameBall.Contains(_key))
+        {
+            IsPurchased = true;
+        }
+        else
+        {
+            IsPurchased = false;
+        }*/
+
+
+        /*if (YG2.saves.indexBall == 1)
+        {
+            IsPurchased = true;
+        }
+        else
+        {
+            IsPurchased = false;
+        }*/
+
+
+    } 
+        
+        
     
     public void SavePurchase()
     {
         PlayerPrefs.SetInt(_key, 1);
+        //YG2.saves.nameBall.Add(_key);
+        //YG2.saves.indexBall = 1;
         IsPurchased = true;
     }
 }
